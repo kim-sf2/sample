@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="에듀웨이브교육원 - 성희롱 예방, 폭력예방교육 등 법정 의무교육 전문기관. 15년 경력의 전문강사가 실효성 있는 교육을 제공합니다.">
+    <title>에듀웨이브교육원 - 전문 의무교육 기관</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+/* ================================
+   CSS Variables & Reset
+   ================================ */
+:root {
+    --primary-navy: #1e3a8a;
+    --primary-blue: #3b82f6;
+    --accent-orange: #f97316;
+    --accent-gold: #fbbf24;
+    --bg-light: #f8fafc;
+    --bg-white: #ffffff;
+    --text-dark: #1e293b;
+    --text-gray: #64748b;
+    --border-gray: #e2e8f0;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --transition-fast: 0.2s ease;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-white);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-base);
+}
+
+ul {
+    list-style: none;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: var(--transition-base);
+}
+
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-md);
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) 0;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+}
+
+.nav-menu {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.nav-menu a {
+    font-weight: 500;
+    color: var(--text-dark);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 6px;
+    transition: var(--transition-fast);
+}
+
+.nav-menu a:hover {
+    color: var(--primary-blue);
+}
+
+.nav-menu .nav-cta {
+    background-color: var(--accent-orange);
+    color: white;
+    padding: var(--spacing-xs) var(--spacing-md);
+}
+
+.nav-menu .nav-cta:hover {
+    background-color: #ea580c;
+    transform: translateY(-2px);
+}
+
+.mobile-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-xs);
+}
+
+.mobile-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-navy);
+    border-radius: 3px;
+    transition: var(--transition-base);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-blue) 100%);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-xl) var(--spacing-md);
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    animation: fadeInUp 1s ease;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: var(--spacing-sm);
+    letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: var(--spacing-md);
+    opacity: 0.95;
+}
+
+.hero-description {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    opacity: 0.9;
+    margin-bottom: var(--spacing-lg);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition-base);
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--accent-orange);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #ea580c;
+    transform: scale(1.05);
+    box-shadow: var(--shadow-xl);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+
+.btn-outline:hover {
+    background-color: white;
+    color: var(--primary-navy);
+}
+
+.hero-scroll {
+    position: absolute;
+    bottom: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+    opacity: 0.7;
+    animation: bounce 2s infinite;
+}
+
+.hero-scroll span {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.scroll-indicator {
+    width: 2px;
+    height: 30px;
+    background: linear-gradient(to bottom, white, transparent);
+}
+
+/* Section Styles */
+section {
+    padding: var(--spacing-xl) 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: var(--spacing-sm);
+}
+
+.section-description {
+    font-size: 1.125rem;
+    color: var(--text-gray);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Programs Section */
+.programs {
+    background-color: var(--bg-white);
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.program-card {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-gray);
+    border-radius: 12px;
+    padding: var(--spacing-md);
+    transition: var(--transition-base);
+}
+
+.program-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-blue);
+}
+
+.program-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.program-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.3;
+}
+
+.program-description {
+    color: var(--text-gray);
+    line-height: 1.7;
+}
+
+/* Instructor Section */
+.instructor {
+    background-color: var(--bg-light);
+}
+
+.instructor-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.instructor-image {
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(135deg, var(--primary-navy), var(--primary-blue));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    box-shadow: var(--shadow-lg);
+}
+
+.instructor-badge {
+    display: inline-block;
+    background-color: var(--accent-gold);
+    color: var(--text-dark);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+.instructor-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: var(--spacing-md);
+}
+
+.instructor-philosophy {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--accent-gold);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background-color: rgba(251, 191, 36, 0.1);
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-gold);
+}
+
+.quote-mark {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.instructor-credentials h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: var(--spacing-sm);
+}
+
+.credentials-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.credentials-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    color: var(--text-gray);
+}
+
+.check-icon {
+    color: var(--primary-blue);
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+/* Gallery Section */
+.gallery {
+    background-color: var(--bg-white);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-base);
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-orange));
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-xl);
+}
+
+.gallery-placeholder {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: var(--spacing-lg);
+}
+
+.gallery-caption {
+    padding: var(--spacing-md);
+    background-color: var(--bg-white);
+}
+
+.gallery-caption h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: var(--spacing-xs);
+}
+
+.gallery-caption p {
+    color: var(--text-gray);
+    font-size: 0.875rem;
+}
+
+/* Schedule Section */
+.schedule {
+    background-color: var(--bg-light);
+}
+
+.schedule-container {
+    display: grid;
+    gap: var(--spacing-sm);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.schedule-item {
+    background-color: var(--bg-white);
+    border-left: 4px solid var(--accent-orange);
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: var(--spacing-md);
+    align-items: center;
+    transition: var(--transition-base);
+}
+
+.schedule-item:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateX(8px);
+}
+
+.schedule-date {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+}
+
+.schedule-info h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: var(--spacing-xs);
+}
+
+.schedule-info p {
+    color: var(--text-gray);
+}
+
+.schedule-note {
+    text-align: center;
+    margin-top: var(--spacing-md);
+    color: var(--text-gray);
+    font-size: 0.875rem;
+}
+
+/* Features Section */
+.features {
+    background-color: var(--bg-white);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.feature-card {
+    text-align: center;
+    padding: var(--spacing-md);
+    background-color: var(--bg-light);
+    border-radius: 12px;
+    transition: var(--transition-base);
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.feature-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.3;
+}
+
+.feature-description {
+    color: var(--text-gray);
+    line-height: 1.7;
+}
+
+/* Contact Section */
+.contact {
+    background-color: var(--bg-light);
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-lg);
+}
+
+.contact-form {
+    background-color: var(--bg-white);
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-sm);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-xs);
+}
+
+.required {
+    color: var(--accent-orange);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-gray);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.checkbox-group {
+    margin-top: var(--spacing-md);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    margin-top: 2px;
+}
+
+.privacy-text {
+    margin-top: var(--spacing-xs);
+    font-size: 0.875rem;
+    color: var(--text-gray);
+    padding-left: 24px;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--primary-navy);
+    color: white;
+    padding: 1rem;
+    border: none;
+    margin-top: var(--spacing-sm);
+}
+
+.btn-submit:hover {
+    background-color: var(--primary-blue);
+    transform: translateY(-2px);
+}
+
+.btn-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.info-box {
+    background-color: var(--bg-white);
+    padding: var(--spacing-md);
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+}
+
+.info-box h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: var(--spacing-sm);
+}
+
+.info-large {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+    margin-bottom: var(--spacing-xs);
+}
+
+.info-time {
+    color: var(--text-gray);
+    font-size: 0.875rem;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-navy);
+    color: white;
+    padding: var(--spacing-lg) 0 var(--spacing-md);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-slogan {
+    opacity: 0.8;
+    font-size: 0.875rem;
+}
+
+.footer-column h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    opacity: 0.8;
+    font-size: 0.875rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: var(--spacing-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0.7;
+    font-size: 0.875rem;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    animation: slideUp 0.3s ease;
+    text-align: center;
+}
+
+.modal-close {
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-md);
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--text-gray);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.modal-close:hover {
+    color: var(--text-dark);
+}
+
+.modal-icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.modal-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: var(--spacing-sm);
+}
+
+.modal-content p {
+    color: var(--text-gray);
+    line-height: 1.8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-navy);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    box-shadow: var(--shadow-lg);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+    .section-title { font-size: 2rem; }
+    .section-description { font-size: 1rem; }
+    .instructor-wrapper { grid-template-columns: 1fr; }
+    .contact-wrapper { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    .features-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 767px) {
+    body { font-size: 14px; }
+    .hero-title { font-size: 2.25rem; }
+    .hero-subtitle { font-size: 1.125rem; }
+    .hero-description { font-size: 1rem; }
+    .section-title { font-size: 1.75rem; }
+    
+    .mobile-toggle { display: flex; }
+    
+    .nav-menu {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 250px;
+        height: calc(100vh - 60px);
+        background-color: white;
+        flex-direction: column;
+        padding: var(--spacing-md);
+        box-shadow: var(--shadow-lg);
+        transition: right 0.3s ease;
+        align-items: flex-start;
+    }
+    
+    .nav-menu.active { right: 0; }
+    .nav-menu a { width: 100%; padding: var(--spacing-sm); }
+    
+    .hero { padding: var(--spacing-lg) var(--spacing-sm); min-height: 90vh; }
+    .hero-buttons { flex-direction: column; width: 100%; }
+    .hero-buttons .btn { width: 100%; }
+    
+    section { padding: var(--spacing-lg) 0; }
+    .programs-grid { grid-template-columns: 1fr; }
+    .instructor-name { font-size: 1.5rem; }
+    .instructor-philosophy { font-size: 1rem; }
+    .schedule-item { grid-template-columns: 1fr; }
+    .features-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-content { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 479px) {
+    .hero-title { font-size: 1.75rem; }
+    .section-title { font-size: 1.5rem; }
+    .btn { padding: 0.875rem 1.5rem; font-size: 0.875rem; }
+}
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1>에듀웨이브교육원</h1>
+                </div>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="메뉴 열기">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#hero">홈</a></li>
+                    <li><a href="#programs">교육과정</a></li>
+                    <li><a href="#instructor">강사소개</a></li>
+                    <li><a href="#gallery">교육현장</a></li>
+                    <li><a href="#schedule">교육일정</a></li>
+                    <li><a href="#contact" class="nav-cta">문의하기</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">에듀웨이브교육원</h1>
+            <p class="hero-subtitle">전문적이고 실효성 있는 의무교육 파트너</p>
+            <p class="hero-description">
+                성희롱 예방, 폭력예방교육 등 법정 의무교육부터<br>
+                조직문화 개선 교육까지
+            </p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">강의 문의하기</a>
+                <a href="#schedule" class="btn btn-outline">교육 일정 보기</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll Down</span>
+            <div class="scroll-indicator"></div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs" id="programs">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">교육 프로그램</h2>
+                <p class="section-description">전문적이고 실효성 있는 다양한 교육과정을 제공합니다</p>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-icon">🛡️</div>
+                    <h3 class="program-title">성희롱·성폭력 예방교육</h3>
+                    <p class="program-description">
+                        직장 내 성희롱·성폭력 예방을 위한 법정 의무교육으로, 
+                        건강한 조직문화 조성을 지원합니다.
+                    </p>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">🔒</div>
+                    <h3 class="program-title">4대 폭력예방교육</h3>
+                    <p class="program-description">
+                        가정폭력, 성폭력, 성매매, 성희롱 등 4대 폭력예방 통합교육으로 
+                        안전한 사회 구현에 기여합니다.
+                    </p>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">👔</div>
+                    <h3 class="program-title">고위공직자 성희롱·성폭력 예방교육</h3>
+                    <p class="program-description">
+                        공직자 및 관리자 대상 특화 교육으로, 조직 내 성인지 감수성 향상과 
+                        책임 있는 리더십을 강화합니다.
+                    </p>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">💡</div>
+                    <h3 class="program-title">성인식 개선교육</h3>
+                    <p class="program-description">
+                        성평등 인식 개선과 양성평등 문화 확산을 위한 
+                        실천 중심 교육 프로그램입니다.
+                    </p>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">⚖️</div>
+                    <h3 class="program-title">가해자인식개선교육</h3>
+                    <p class="program-description">
+                        성희롱·성폭력 행위자 대상 재발방지 교육으로, 
+                        올바른 인식 전환과 행동 변화를 유도합니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructor Section -->
+    <section class="instructor" id="instructor">
+        <div class="container">
+            <div class="instructor-wrapper">
+                <div class="instructor-image">
+                    프로필 사진<br>준비 중
+                </div>
+                <div class="instructor-info">
+                    <span class="instructor-badge">대표강사</span>
+                    <h2 class="instructor-name">김은정</h2>
+                    <p class="instructor-philosophy">
+                        <span class="quote-mark">"</span>
+                        현장 경험과 전문성을 바탕으로<br>
+                        실질적 변화를 이끄는 교육을 실천합니다.
+                        <span class="quote-mark">"</span>
+                    </p>
+                    <div class="instructor-credentials">
+                        <h3>경력 및 자격</h3>
+                        <ul class="credentials-list">
+                            <li>
+                                <span class="check-icon">✓</span>
+                                한국양성평등교육진흥원 폭력예방/양성평등 전문강사
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                전) 제주경찰청 성평등정책 행정관
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                전) 제주특별자치도 성희롱 고충상담 및 처리 담당 사무관
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                한양대학교 교육학과 졸업
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                교육학 석사
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">생동감 있는 교육 현장</h2>
+                <p class="section-description">참여형 교육으로 실질적인 변화를 만들어갑니다</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        교육 현장 사진 1<br>준비 중
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>경산시의회 전문성 강화교육</h3>
+                        <p>2024년 교육 현장</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        교육 현장 사진 2<br>준비 중
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>참여형 교육 진행</h3>
+                        <p>실천 중심 교육 프로그램</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="schedule" id="schedule">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">교육 일정</h2>
+                <p class="section-description">예정된 교육 일정을 확인하세요</p>
+            </div>
+            <div class="schedule-container" id="scheduleContainer"></div>
+            <p class="schedule-note">* 일정은 계속 업데이트됩니다</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">에듀웨이브의 차별화 포인트</h2>
+                <p class="section-description">왜 에듀웨이브교육원을 선택해야 할까요?</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3 class="feature-title">15년 이상의<br>교육 현장 경험</h3>
+                    <p class="feature-description">
+                        공공기관, 민간기업, 교육기관 등 다양한 현장에서 
+                        축적한 실전 노하우
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <h3 class="feature-title">법적 요구사항<br>완벽 충족</h3>
+                    <p class="feature-description">
+                        남녀고용평등법, 성폭력방지법 등 관련 법규를 
+                        완벽하게 반영한 교육 커리큘럼
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">참여형<br>실전 중심 교육</h3>
+                    <p class="feature-description">
+                        사례 중심 토론과 실습으로 실제 상황에 
+                        적용 가능한 실효성 있는 교육
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💼</div>
+                    <h3 class="feature-title">맞춤형<br>교육 과정 설계</h3>
+                    <p class="feature-description">
+                        기관 특성과 교육 대상에 맞춘 
+                        최적화된 교육 프로그램 제공
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">교육 문의</h2>
+                <p class="section-description">교육 관련 문의사항을 남겨주시면 24시간 내에 연락드립니다</p>
+            </div>
+            <div class="contact-wrapper">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="organization">기관/회사명 <span class="required">*</span></label>
+                            <input type="text" id="organization" name="organization" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">담당자명 <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">연락처 <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" pattern="010-[0-9]{4}-[0-9]{4}" placeholder="010-0000-0000" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">이메일 <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="program">희망 교육 과정 <span class="required">*</span></label>
+                        <select id="program" name="program" required>
+                            <option value="">선택해주세요</option>
+                            <option value="성희롱·성폭력 예방교육">성희롱·성폭력 예방교육</option>
+                            <option value="4대 폭력예방교육">4대 폭력예방교육</option>
+                            <option value="고위공직자 성희롱·성폭력 예방교육">고위공직자 성희롱·성폭력 예방교육</option>
+                            <option value="성인식 개선교육">성인식 개선교육</option>
+                            <option value="가해자인식개선교육">가해자인식개선교육</option>
+                            <option value="기타">기타</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="participants">예상 교육 인원</label>
+                            <input type="number" id="participants" name="participants" min="1" placeholder="예: 30">
+                        </div>
+                        <div class="form-group">
+                            <label for="schedule">희망 교육 일정</label>
+                            <input type="text" id="schedule" name="schedule" placeholder="예: 2025년 2월 중">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">상세 문의 내용</label>
+                        <textarea id="message" name="message" rows="5" placeholder="교육과 관련하여 문의하실 내용을 자유롭게 작성해주세요"></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <span>개인정보 수집 및 이용에 동의합니다 <span class="required">*</span></span>
+                        </label>
+                        <p class="privacy-text">
+                            수집된 정보는 교육 문의 응대 목적으로만 사용되며, 
+                            관련 법령에 따라 안전하게 관리됩니다.
+                        </p>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-submit" id="submitBtn">
+                        <span class="btn-text">문의 접수하기</span>
+                        <span class="btn-loading" style="display: none;">전송 중...</span>
+                    </button>
+                </form>
+                
+                <div class="contact-info">
+                    <div class="info-box">
+                        <h3>📞 직접 문의</h3>
+                        <p class="info-large">010-2664-6204</p>
+                        <p class="info-time">평일 09:00 - 18:00<br>휴일 10:00 - 15:00</p>
+                    </div>
+                    <div class="info-box">
+                        <h3>✉️ 이메일</h3>
+                        <p class="info-large">jei6204@hanmail.net</p>
+                    </div>
+                    <div class="info-box">
+                        <h3>📍 오시는 길</h3>
+                        <p>제주시 월정1길 54-1</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-logo">에듀웨이브교육원</h3>
+                    <p class="footer-slogan">전문적이고 실효성 있는 의무교육 파트너</p>
+                </div>
+                <div class="footer-column">
+                    <h4>연락처</h4>
+                    <ul class="footer-list">
+                        <li>강의접수: 010-2664-6204</li>
+                        <li>이메일: jei6204@hanmail.net</li>
+                        <li>주소: 제주시 월정1길 54-1</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>운영 정보</h4>
+                    <ul class="footer-list">
+                        <li>평일: 09:00 - 18:00</li>
+                        <li>휴일: 10:00 - 15:00</li>
+                        <li>사업자등록번호: 102-27-75425</li>
+                        <li>입금계좌: 우리은행 081-038197-02-101</li>
+                        <li>예금주: 김은정</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 에듀웨이브교육원. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <div class="modal-icon">✅</div>
+            <h3>문의가 전송되었습니다!</h3>
+            <p>
+                담당자에게 이메일로 전달되었습니다.<br>
+                영업일 기준 24시간 내에 연락드리겠습니다.<br><br>
+                급하신 경우 <strong>010-2664-6204</strong>로<br>
+                직접 연락 주시기 바랍니다.
+            </p>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="맨 위로">↑</button>
+
+    <script>
+// Schedule Data
+const scheduleData = [
+    { date: "2025-12-05", displayDate: "2025년 12월 5일", title: "양성평등교육", location: "00어린이집" },
+    { date: "2025-12-11", displayDate: "2025년 12월 11일", title: "성희롱고충심의위원회", location: "해군000대" },
+    { date: "2025-12-15", displayDate: "2025년 12월 15일", title: "성비위예방교육", location: "00경찰청" },
+    { date: "2025-12-16", displayDate: "2025년 12월 16일", title: "성비위예방교육", location: "00경찰청" },
+    { date: "2025-12-17", displayDate: "2025년 12월 17일", title: "성비위 예방교육", location: "00경찰서" },
+    { date: "2026-12-26", displayDate: "2026년 12월 26일", title: "사이버성폭력예방교육", location: "00중학교" }
+];
+
+// Render Schedule
+function renderSchedule() {
+    const container = document.getElementById('scheduleContainer');
+    const sortedSchedule = [...scheduleData].sort((a, b) => new Date(b.date) - new Date(a.date));
+    
+    container.innerHTML = sortedSchedule.map(item => `
+        <div class="schedule-item fade-in-up">
+            <div class="schedule-date">${item.displayDate}</div>
+            <div class="schedule-info">
+                <h3>${item.title}</h3>
+                <p>${item.location}</p>
+            </div>
+        </div>
+    `).join('');
+}
+
+// Form Handler with Email
+class FormHandler {
+    constructor() {
+        this.form = document.getElementById('contactForm');
+        this.modal = document.getElementById('successModal');
+        this.submitBtn = document.getElementById('submitBtn');
+        this.btnText = this.submitBtn.querySelector('.btn-text');
+        this.btnLoading = this.submitBtn.querySelector('.btn-loading');
+        this.init();
+    }
+    
+    init() {
+        this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+        document.getElementById('modalClose').addEventListener('click', () => this.closeModal());
+        this.modal.addEventListener('click', (e) => {
+            if (e.target === this.modal) this.closeModal();
+        });
+        
+        const phoneInput = document.getElementById('phone');
+        phoneInput.addEventListener('input', (e) => this.formatPhoneNumber(e));
+    }
+    
+    handleSubmit(e) {
+        e.preventDefault();
+        if (!this.validateForm()) return;
+        
+        this.setLoadingState(true);
+        
+        // Get form data
+        const formData = new FormData(this.form);
+        const data = Object.fromEntries(formData.entries());
+        
+        // Create email body
+        const emailBody = `
+교육 문의가 접수되었습니다.
+
+▼ 문의 정보
+━━━━━━━━━━━━━━━━━━━━
+기관/회사명: ${data.organization}
+담당자명: ${data.name}
+연락처: ${data.phone}
+이메일: ${data.email}
+희망 교육 과정: ${data.program}
+예상 교육 인원: ${data.participants || '미입력'}
+희망 교육 일정: ${data.schedule || '미입력'}
+
+▼ 상세 문의 내용
+━━━━━━━━━━━━━━━━━━━━
+${data.message || '없음'}
+
+━━━━━━━━━━━━━━━━━━━━
+접수 시간: ${new Date().toLocaleString('ko-KR')}
+        `.trim();
+        
+        // Create mailto link
+        const subject = encodeURIComponent(`[에듀웨이브] ${data.organization} - ${data.name} 교육 문의`);
+        const body = encodeURIComponent(emailBody);
+        const mailtoLink = `mailto:jei6204@hanmail.net?subject=${subject}&body=${body}`;
+        
+        // Open email client
+        window.location.href = mailtoLink;
+        
+        // Show success message
+        setTimeout(() => {
+            this.handleSuccess();
+            this.setLoadingState(false);
+        }, 500);
+    }
+    
+    validateForm() {
+        const requiredFields = this.form.querySelectorAll('[required]');
+        let isValid = true;
+        
+        requiredFields.forEach(field => {
+            if (!field.value || (field.type === 'checkbox' && !field.checked)) {
+                isValid = false;
+                field.style.borderColor = 'var(--accent-orange)';
+            } else {
+                field.style.borderColor = 'var(--border-gray)';
+            }
+        });
+        
+        if (!isValid) {
+            alert('필수 항목을 모두 입력해주세요.');
+        }
+        
+        return isValid;
+    }
+    
+    formatPhoneNumber(e) {
+        let value = e.target.value.replace(/\D/g, '');
+        if (value.length <= 3) {
+            e.target.value = value;
+        } else if (value.length <= 7) {
+            e.target.value = `${value.slice(0, 3)}-${value.slice(3)}`;
+        } else {
+            e.target.value = `${value.slice(0, 3)}-${value.slice(3, 7)}-${value.slice(7, 11)}`;
+        }
+    }
+    
+    setLoadingState(isLoading) {
+        this.submitBtn.disabled = isLoading;
+        this.btnText.style.display = isLoading ? 'none' : 'inline';
+        this.btnLoading.style.display = isLoading ? 'inline' : 'none';
+    }
+    
+    handleSuccess() {
+        this.form.reset();
+        this.showModal();
+        setTimeout(() => this.closeModal(), 7000);
+    }
+    
+    showModal() {
+        this.modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    closeModal() {
+        this.modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+// Navigation
+class Navigation {
+    constructor() {
+        this.navbar = document.getElementById('navbar');
+        this.mobileToggle = document.getElementById('mobileToggle');
+        this.navMenu = document.getElementById('navMenu');
+        this.navLinks = document.querySelectorAll('.nav-menu a');
+        this.init();
+    }
+    
+    init() {
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 100) {
+                this.navbar.classList.add('scrolled');
+            } else {
+                this.navbar.classList.remove('scrolled');
+            }
+        });
+        
+        this.navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (link.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href').substring(1);
+                    this.scrollToSection(targetId);
+                    this.closeMobileMenu();
+                }
+            });
+        });
+        
+        this.mobileToggle.addEventListener('click', () => this.toggleMobileMenu());
+    }
+    
+    scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (!section) return;
+        
+        const navHeight = this.navbar.offsetHeight;
+        const targetPosition = section.offsetTop - navHeight;
+        
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    }
+    
+    toggleMobileMenu() {
+        this.navMenu.classList.toggle('active');
+        document.body.style.overflow = this.navMenu.classList.contains('active') ? 'hidden' : '';
+    }
+    
+    closeMobileMenu() {
+        this.navMenu.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+// Scroll Animations
+class ScrollAnimations {
+    constructor() {
+        this.observer = new IntersectionObserver(
+            (entries) => this.handleIntersection(entries),
+            { threshold: 0.1 }
+        );
+        this.observeElements();
+    }
+    
+    observeElements() {
+        const elements = document.querySelectorAll('.fade-in-up, .program-card, .feature-card, .schedule-item');
+        elements.forEach(el => this.observer.observe(el));
+    }
+    
+    handleIntersection(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }
+}
+
+// Back to Top Button
+function initBackToTop() {
+    const button = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 500) {
+            button.classList.add('show');
+        } else {
+            button.classList.remove('show');
+        }
+    });
+    
+    button.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+    renderSchedule();
+    new FormHandler();
+    new Navigation();
+    new ScrollAnimations();
+    initBackToTop();
+    console.log('✅ 에듀웨이브교육원 페이지 로드 완료');
+    console.log('📧 이메일 전송 방식으로 작동합니다');
+});
+    </script>
+</body>
+</html>
